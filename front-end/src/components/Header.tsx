@@ -1,13 +1,11 @@
 import { FunctionComponent } from "react";
+import { NavLink } from "react-router-dom";
 
 const PageHeader : FunctionComponent = () => {
     return (
         <div>
-        <button >Home</button>
-        <button >Biografia</button>
-        <button >Produtos</button>
-        <button >Contatos</button>
-    
+        <NavLink to="/PageHome">Home</NavLink>
+        <NavLink to="/PaginaProdutos">PaginaProdutos</NavLink>    
         </div>
         
     )
