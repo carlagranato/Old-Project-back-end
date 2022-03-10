@@ -1,6 +1,8 @@
 import express from 'express'
 import cors from 'cors'
-
+import Categoria from './models/categoria'
+import routerCategorias from './routers/categorias'
+import routerProdutos from './routers/produtos'
 // Porta do servidor
 const PORT = process.env.PORT || 4000
 
@@ -14,6 +16,12 @@ const app = express()
 app.get('/', (req, res) => {
 	res.send('bem-vindo!')
 })
+
+// Endpoint para listar todas as categorias
+app.use('/', routerCategorias)
+
+//Endpont para listar os produtos
+app.use('/', routerProdutos)
 
 // Cors
 app.use(cors({
