@@ -25,7 +25,7 @@ app.use('/', routerProdutos)
 
 // Cors
 app.use(cors({
-	origin: ['http://localhost:3000', 'https://old-project-back-end.herokuapp.com']
+	origin: ['http://localhost:3000', 'https://old-project-front-end.herokuapp.com/']
 }))
 
 // Resposta padrão para quaisquer outras requisições:
