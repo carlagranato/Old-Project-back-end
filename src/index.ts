@@ -17,16 +17,16 @@ app.get('/', (req, res) => {
 	res.send('bem-vindo!')
 })
 
+// Cors
+app.use(cors({
+	origin: ['http://localhost:3000', 'https://old-project-front-end.herokuapp.com/']
+}))
+
 // Endpoint para listar todas as categorias
 app.use('/', routerCategorias)
 
 //Endpont para listar os produtos
 app.use('/', routerProdutos)
-
-// Cors
-app.use(cors({
-	origin: ['http://localhost:3000', 'https://old-project-front-end.herokuapp.com/']
-}))
 
 // Resposta padrão para quaisquer outras requisições:
 app.use((req, res) => {
