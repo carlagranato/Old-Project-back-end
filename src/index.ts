@@ -17,6 +17,7 @@ app.get('/', (req, res) => {
 	res.send('bem-vindo!')
 })
 
+
 // Endpoint para listar todas as categorias
 app.use('/', routerCategorias)
 

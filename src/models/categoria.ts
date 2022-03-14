@@ -6,3 +6,4 @@ type Categoria = {
 
 
 export default Categoria
+

@@ -19,3 +19,4 @@ routerProdutos.get('/produtos/:id', (req, res) => {
 })
 
 export default routerProdutos
+
