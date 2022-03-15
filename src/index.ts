@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 
 // Cors
 app.use(cors({
-	origin: ['http://localhost:3000', 'https://old-project-front-end.herokuapp.com/']
+	origin: ['http://localhost:3000', 'https://old-project-front-end.herokuapp.com']
 }))
 
 // Endpoint para listar todas as categorias
