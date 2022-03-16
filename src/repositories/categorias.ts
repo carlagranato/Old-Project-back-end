@@ -15,16 +15,16 @@ const repositoryCategorias = {
         
             },
 
-
-    ler: (id: number) => {
-        const categorias: Categoria = {
-            id: 1,
-            nome: 'elétrodomésticos',
-            idpai: null
-        }
-
-       
-        return categorias
+            lerCategoria: (id: number, callback: (categoria: Categoria) => void) => {
+                const sql = `SELECT * FROM produtos WHERE id = ${id}`
+            console.log(sql)
+    
+            const allCallback = (err: Error | null, row: Categoria) => {
+                    callback(row)
+                }
+    
+             database.get(sql, allCallback)  
+        
     },
     
 }
