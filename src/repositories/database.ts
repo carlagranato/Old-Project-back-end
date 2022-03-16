@@ -21,6 +21,18 @@ CREATE TABLE produtos (
 
 )`
 
+const SQL_DESCRICOES_CREATE =`
+CREATE TABLE descricoes (
+    id INTEREGER PRIMARY KEY AUTOINCREMENT,
+    nome TEXT,
+    preco REAL,
+    descricao TEXT,
+    imagem TEXT,
+    idCategoria INTEGER,
+    FOREIGN KEY (idProduto) references categorias (id)
+
+)`
+
 const database = new sqlite3.Database(DBSOURCE, (err) => {
     if (err) {
         console.error(err.message)
